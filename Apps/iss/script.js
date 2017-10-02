@@ -96,7 +96,7 @@
         viewer.terrainProvider = cesiumTerrainProviderMeshes;
     
         var center = Cesium.Cartesian3.fromDegrees(21, 52);
-        
+          
         viewer.scene.globe.enableLighting = true;
         
         fog = new Cesium.Fog();
@@ -240,7 +240,7 @@
         );handler.setInputAction(function(click) {
         clicked = true;        
         if (lastClick != null)
-        clearInterval(lastClick);                     
+        clearTimeout(lastClick);                     
         viewer.camera.cancelFlight();
         setTimeout (function(){clicked=false;}, 60000);
         }, Cesium.ScreenSpaceEventType.LEFT_UP 
