@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-  <title>Hello World!</title>
+  <title>ISS</title>
   <script src="../../Build/Cesium/Cesium.js"></script>
   <style>
       @import url(../../Build/Cesium/Widgets/widgets.css);
@@ -65,15 +65,18 @@
 </head>
 <body>
   <!-- add some music -->
-  <iframe src="http://ice1.somafm.com/spacestation-128-mp3" style="visibilty: hidden; top: -1000; left: -1000; position: absolute;"></iframe>
+  <iframe src="http://ice1.somafm.com/missioncontrol-128-mp3" style="visibilty: hidden; top: -1000; left: -1000; position: absolute;"></iframe>  
+  <!-- preloader and random quote -->
   <div id="preloaderWrapper">
       <p class="loading" id="quote">
       
       </p>
   </div>
+  <!-- location data -->
   <div class="toolbar-left" id="coordinatesText">
   Waiting for data...    
-  </div>
+  </div>            
+  <!-- globe -->
   <div id="cesiumContainer"></div>
   <script>
     function randomQuote() {
@@ -199,7 +202,8 @@
     var currentLat; 
     var currentLong;
     var textLocation = 'test';
-      
+                           
+    /* location data */
     setInterval(function() {
 
       //Cesium JDN to Unix timestamp 
