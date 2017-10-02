@@ -247,7 +247,7 @@
         );
         var autorotate = setInterval(function() {
         ra++;
-        if (ra == 361)
+        if (ra > 360)
         ra = 0;
                               
         if (clicked == false)  
