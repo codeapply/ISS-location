@@ -53,11 +53,12 @@
     return quote;
     }
     
-    
+    //main init
     document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('quote').innerHTML = randomQuote();
     initCesium();
     }, false);
+    
     //preloader
     window.onload = function () {
     setTimeout(function(){ 
@@ -95,7 +96,7 @@
         viewer.terrainProvider = cesiumTerrainProviderMeshes;
     
         var center = Cesium.Cartesian3.fromDegrees(21, 52);
-        //viewer.camera.lookAt(center, new Cesium.Cartesian3(21.0, 52.0, 20000000.0));
+        
         viewer.scene.globe.enableLighting = true;
         
         fog = new Cesium.Fog();
@@ -230,13 +231,16 @@
         var ra = 0;
         var clicked = false;
         var handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
+        var lastClick;
         handler.setInputAction(function(click) {
         clicked = true;
         viewer.camera.cancelFlight();
-        setTimeout (function(){clicked=false;}, 60000);
+        lastClick = setTimeout (function(){clicked=false;}, 60000);
         }, Cesium.ScreenSpaceEventType.LEFT_DOWN 
         );handler.setInputAction(function(click) {
-        clicked = true;                             
+        clicked = true;        
+        if (lastClick != null)
+        clearInterval(lastClick);                     
         viewer.camera.cancelFlight();
         setTimeout (function(){clicked=false;}, 60000);
         }, Cesium.ScreenSpaceEventType.LEFT_UP 
