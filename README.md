@@ -1,5 +1,5 @@
 # iss
-Visualisation of live ISS whereabouts. Tech. stack: Node.js + Cesiumjs
+Visualisation of International Space Station(ISS) whereabouts. Tech. stack: Node.js + Cesiumjs
 
 To run:
 
