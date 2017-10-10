@@ -3,17 +3,18 @@ Visualisation of live ISS whereabouts. Tech. stack: Node.js + Cesiumjs
 
 To run:
 
-Donwload and unzip to /workspace/iss/
-Download and install node.js
-Cd to /workspace/iss/
-In CLI(cmd/bash) execute command: node start
-Go to http://localhost:8080/Apps/iss/
+1. Download and unzip to /workspace/iss/
+2. Download and install node.js
+3. Cd to /workspace/iss/
+4. In CLI(cmd/bash) execute command: node start
+5. Go to http://localhost:8080/Apps/iss/
 
 To build locally (without pulling whole repo):
-Cd to /workspace/iss/
-Download and extract Cesiumjs
-Download Node.js
-Execute (cli): npm install
-Copy /Apps/iss folder content to /Apps/iss
-Run (cli): npm start
-Go to http://localhost:8080/Apps/iss/
+
+1. Cd to /workspace/iss/
+2. Download and extract Cesiumjs
+3. Download Node.js
+4. Execute (cli): npm install
+5. Copy /Apps/iss folder content to /Apps/iss
+6. Run (cli): npm start
+7. Go to http://localhost:8080/Apps/iss/
