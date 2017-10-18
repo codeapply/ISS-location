@@ -18,3 +18,5 @@ To build locally (without pulling whole repo):
 5. Copy /Apps/iss folder content to /Apps/iss
 6. Run (cli): npm start
 7. Go to http://localhost:8080/Apps/iss/
+
+Video: (youtu.be) cLyWUEWPups
